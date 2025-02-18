@@ -1,0 +1,137 @@
+<!DOCTYPE>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Videos</title>
+  <style>
+    .header {
+      position: sticky;
+      top: 0;
+      margin: auto;
+      z-index: 999;
+    }
+    .content {
+      flex-grow: 8;
+    }
+    iframe {
+      display: block;
+      margin: auto;
+      border: none;
+      width: 820px;
+      height: 620px;
+    }
+    iframe:hover, video:hover{
+      box-shadow: 0px 0px 15px rgb(255, 77, 148, 0.5);
+    }
+    p {
+      text-align: center;
+    }
+
+    .gallery {
+      --gap: 15px;
+      --num-columns: 6;
+      --row-height: 300px;
+      display: grid;
+      overflow: hidden;
+
+      box-sizing: border-box;
+      padding: var(--gap);
+
+      grid-template-columns: repeat(var(--num-colums)), 1fr;
+      grid-template-rows: var(--row-height);
+      gap: var(--gap)
+    }
+
+    .gallery > video {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  </style>
+   <!-- headtitle font -->
+   <link rel="stylesheet" href="style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
+  
+  <!-- title font -->
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@500&display=swap" rel="stylesheet">
+
+  <!-- font -->
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="header">
+    <div class ="textbox header">
+      <ul>
+        <li><a href="pictures.html">Pictures</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="abouther.html">About Her</a></li>
+      </ul>      
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="textbox footer" style="padding: 0.1vh 0.5vw; border-radius: 5px 0; border-bottom-style: none;">
+      <p>contact : <a href="https://github.com/nozamas" target="_blank"> GitHub</a> </p>
+    </div>
+  </div>
+
+  <!-- left -->
+  <div class="sidebar">
+    <div class="title left">
+      <h2>I LIKE THOSE!!!</h2>
+    </div>
+    <div class="textbox left">
+      <p>Here are some videos that I really like.</p>
+      <p>Most of them are on youtube already,<br> so I've just embeded them.</p>
+    </div>
+    <div class="textbox left">
+      <p>also includes funny memes <br>from my computer.</p>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="title middle">
+      <h2>SAID-VIDEOS!!!</h2>
+    </div>
+    <div class="textbox middle">
+     <iframe src="https://www.youtube.com/embed/2a-mso3bwX4"> </iframe>
+     <p>this one always makes me giggle.<br></p>
+     <iframe src="https://www.youtube.com/embed/nqOsZTUpJ5Y"> </iframe>
+     <p>mandatory gura cover song. <br></p>
+     <iframe src="https://www.youtube.com/embed/_sXvVzIi_Fg" title></iframe>
+     <p>Flan and Yakusa</p>
+    </div>
+    <div class="textbox middle">
+      <h2 style="text-align: center;">Videos from my computer :)</h2>
+      <div class="gallery">
+         <video controls style="grid-column: span 2; grid-row: span 3;">
+           <source src="sources/hamtaroNaruto.mp4" type="video/mp4">
+         </video>
+         <video controls style="grid-row: span 2;">
+          <source src="sources/wompWomp.mp4" type="video/mp4">
+         </video>
+         <video controls>
+          <source src="sources/touhouMadGoblin.mp4" type="video/mp4"> 
+         </video>
+         <video controls style="grid-column: span 3;">
+          <source src="sources/marine.mp4" type="video/mp4">
+         </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- right -->
+  <!-- <div class="sidebar">
+    
+  </div> -->
+</body>

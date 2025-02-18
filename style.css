@@ -1,0 +1,219 @@
+/* main appearance */
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-image: url("sources/bgImage.gif");
+  background-size: 75px 75px; 
+  background-position: 0 0;
+  background-color:  #e6e6ff;
+  background-attachment: fixed;
+  animation: bg-scroll 100s infinite;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+body::-webkit-scrollbar {
+   display: none;
+}
+
+/* headtitle*/
+
+.chelsea-market-regular {
+  font-family: "Chelsea Market", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* title font */
+
+.lexend-giga {
+  font-family: "Lexend Giga", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* font */
+
+.noticia-text-regular {
+  font-family: "Noticia Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.noticia-text-bold {
+  font-family: "Noticia Text", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.noticia-text-regular-italic {
+  font-family: "Noticia Text", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.noticia-text-bold-italic {
+  font-family: "Noticia Text", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+/* flex propreties */
+.sidebar {
+    flex-basis: 25%;
+  }
+  
+.content {
+    flex-basis: 50%;
+    justify-content: center;
+}
+
+.header {
+    flex-basis: 100%;
+}
+
+.footer {
+    flex-basis: 100%;
+    position: fixed;
+    bottom: 0;
+    right: 50%;
+    z-index: 1;
+    text-align: center;
+}
+
+/* responsive design */
+
+@media screen and (max-width: 750px) {
+  .content {
+    flex-basis: 100%;
+    }
+    
+  .sidebar {
+    justify-content: center;
+    flex-basis: 50%;
+    align-content: center;
+    margin: auto
+    }
+      
+  .left {
+    text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+  .sidebar {
+    justify-content: center;
+    flex-basis: 100%;
+    margin: auto;
+  }
+  
+  .left {
+    text-align: center;
+   
+    }
+}
+
+/* animated bg */
+@keyframes bg-scroll {
+  from {background-position: 0 0;}
+  to {background-position: -100% 0;}
+  }
+
+/* boxes */
+
+.title {
+    font-family: Lexend Giga;
+    font-style: bold, underline;
+    font-size: 2.5vh;
+    background-color: #ccccff;
+    border: solid;
+    border-color:  #8080ff;
+    border-radius: 10px;
+    margin: 1vw 2vw;
+}
+
+.left{
+    text-align: center;
+    margin: 0 4.5vw;
+}
+
+.right {
+    text-align: left;
+    
+}
+
+.middle {
+    text-align: center;
+    margin: 0 4.5vw;
+}
+
+
+
+.headtitle {
+    font-family: Chelsea Market;
+    text-align: center;
+    font-size: 2.8vh;
+    background-color: #ccccff;
+    border: solid;
+    border-radius: 10px;
+    border-color: #8080ff;
+    margin: 0px 15vw;
+}
+
+.secret {
+  background: transparent;
+  text-decoration: none;
+  border: none;
+  font-size: 2.8vh;
+}
+
+.textbox {
+    font-family: Noticia Text;
+    text-align: left;
+    font-size: 1.8vh;
+    background-color: #cce6ff;
+    border: solid;
+    border-radius: 0.5vw;
+    border-color:   #99ceff;
+    margin: 1vw 2vw;
+    padding: 0.5vw;
+}
+
+.header {
+  text-align: center;
+  margin: 0 15vw;
+  margin-top: 0.5vw;
+  margin-bottom: 1vw;
+  }
+
+.header li {
+    display: inline;
+    padding : 0.8vw;
+    justify-content: center;
+  }
+  
+.footer {
+    display: table;
+    text-align: center;
+    margin: auto;
+}
+
+/* links */
+
+a:link, a:visited, a:active {
+    text-decoration: none;
+}
+
+a:visited {
+  color: rgb(0, 0, 153);
+}
+
+a:hover {
+    color : rgb(204, 204, 255);
+  }
+
