@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+  
+  <img src="tetoPear.png" alt="Teto of Wisdom" id="Img">
+
+  <p> teto of wisdom </p>
+
+  <script>
+   let button = document.getElementById("Img");
+   let quote = document.querySelector("p");
+
+   button.addEventListener("click", updateName);
+
+   function updateName() {
+     let wisdom
+     let roll = Math.floor(Math.random() * 100) + 1;
+     if (roll <= 25){
+       wisdom = "JS is a scam";
+     }
+     if (roll >= 26 && roll <= 50) {
+       wisdom = "LIFE IS PAIN, I HATE-";
+     }
+     if (roll >= 51 && roll <= 75) {
+       wisdom = "the state of Isreal is illegitimate";
+     }
+     if (roll >= 76) {
+       wisdom = "Portable 3rd is the best entry in the series";
+     }
+
+     quote.textContent = "teto of wisdom said :" + wisdom;
+   }
+  </script>
+
+  </body>
+</html>
