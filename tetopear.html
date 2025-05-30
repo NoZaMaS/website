@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="style.css" rel="stylesheet">
+    <style>
+    .body{
+    }
+    
+    @keyframes hover{
+      from 
+    }
+    
+    .header{
+      margin-bottom: 0;
+      padding-bottom: 15px;
+    }
+
+    img{
+      display: block;
+      margin: auto;
+      padding: 15px;
+    }
+
+    img:hover{
+      transform:rotate(7deg);
+    }
+    </style>
+  </head>
+
+  <body>
+
+  <div class="header">
+   <div class="textbox header">
+    <a href="index.html">go back</a> 
+   </div> 
+  </div>
+  <div class="textbox" style="display:block; width:80%; height:100%; margin: auto;">
+     
+  <img src="sources/tetoPear.png" alt="Teto of Wisdom" id="Img" width=250px height=250px onclick="counter()">
+
+  <p style="text-align: center;"> teto of wisdom </p> <p style="text-align:center;"> number of clicks : <a id="counter"> 0 </a> </p>
+  </div>
+
+
+
+
+  <script>
+   let button = document.getElementById("Img");
+   let quote = document.querySelector("p");
+
+   button.addEventListener("click", updateName);
+
+   function updateName() {
+     let wisdom;
+     let roll = Math.floor(Math.random() * 100) + 1;
+     if (roll <= 25){
+       wisdom = "JS is a scam";
+     }
+     if (roll >= 26 && roll <= 50) {
+       wisdom = "LIFE IS PAIN, I HATE-";
+     }
+     if (roll >= 51 && roll <= 75) {
+       wisdom = "the state of Isreal is illegitimate";
+     }
+     if (roll >= 76) {
+       wisdom = "Portable 3rd is the best entry in the series";
+     }
+
+     quote.textContent = "teto of wisdom said :" + wisdom;
+   }
+
+   var click = 0;
+   var count = 0;
+   function counter() {
+    click += 1;
+    count += 1;
+    document.getElementById("counter").innerHTML = click;
+    if (count == 25) {
+      alert("get a life");
+      count = 0;
+    }
+   }
+  </script>
+
+  </body>
+</html>

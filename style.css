@@ -10,7 +10,8 @@ body {
   background-position: 0 0;
   background-color:  #e6e6ff;
   background-attachment: fixed;
-  animation: bg-scroll 100s infinite;
+  animation: bg-scroll 100s infinite linear;
+  animation-fill-mode: both;
   display: flex;
   flex-wrap: wrap;
 }
@@ -94,9 +95,7 @@ body::-webkit-scrollbar {
     }
     
   .sidebar {
-    justify-content: center;
-    flex-basis: 50%;
-    align-content: center;
+    flex-basis: 100%;
     margin: auto
     }
       
@@ -107,7 +106,6 @@ body::-webkit-scrollbar {
 
 @media screen and (max-width: 500px) {
   .sidebar {
-    justify-content: center;
     flex-basis: 100%;
     margin: auto;
   }
@@ -149,7 +147,7 @@ body::-webkit-scrollbar {
 
 .middle {
     text-align: center;
-    margin: 0 4.5vw;
+    margin: 0 2vw;
 }
 
 
@@ -162,7 +160,7 @@ body::-webkit-scrollbar {
     border: solid;
     border-radius: 10px;
     border-color: #8080ff;
-    margin: 0px 15vw;
+    margin: 2vh 2vw;
 }
 
 .secret {
@@ -186,9 +184,6 @@ body::-webkit-scrollbar {
 
 .header {
   text-align: center;
-  margin: 0 15vw;
-  margin-top: 0.5vw;
-  margin-bottom: 1vw;
   }
 
 .header li {
