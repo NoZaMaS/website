@@ -1,4 +1,22 @@
 {
+  "name": "nozascorner",
+  "version": "1.0.0",
+  "description": "github pages of my site",
+  "homepage": "https://github.com/NoZaMaS/website#readme",
+  "bugs": {
+    "url": "https://github.com/NoZaMaS/website/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoZaMaS/website.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "howler": "^2.2.4"
   }
