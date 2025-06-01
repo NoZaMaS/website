@@ -106,7 +106,7 @@ body::-webkit-scrollbar {
 
 @media screen and (max-width: 500px) {
   .sidebar {
-    flex-basis: 100%;
+    flex-basis: 80%;
     margin: auto;
   }
   

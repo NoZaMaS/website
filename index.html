@@ -12,6 +12,8 @@
       margin: auto;
      }
    </style>
+   <script src="node_modules/howler/dist/howler.js"></script>
+   <script src="script.js"></script>
    <!-- headtitle font -->
    <link rel="stylesheet" href="style.css">
    <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,8 +47,7 @@
 
    <!-- footer -->
    <div class="footer">
-    <div class="textbox footer" style="padding: 0.1vh 0.5vw; border-radius: 5px 0; border-bottom-style: none;
-      margin: auto;">
+    <div class="textbox footer" style="padding: 0.1vh 0.5vw; border-radius: 5px 0; border-bottom-style: none;margin: auto;">
       <p>contact : <a href="https://github.com/nozamas" target="_blank"> GitHub</a> </p>
     </div>
    </div>
@@ -54,14 +55,15 @@
    <!-- sidebar left-->
    <div class="sidebar">
     <div class="title left">
-      <h2>PARTNER'S SITES</h2>
+      <h2>WEBRING (IT'S BACK!!!!)</h2>
     </div>
     <div class="textbox left">
       <ul>
-        <li><a href="https://www.touhou-online.net/" target="_blank">Touhou Online</li>
-        <li><a href="https://touhou-france.forumactif.com/" target="_blank">Touhou France</a></li>
-        <li><a href="https://en.touhouwiki.net/wiki/Touhou_Wiki" target="_blank">Touhou Wiki</a></li>
-        <li><a href="https://nozascorner.neocities.org/" target="_blank"><img class="top" style="image-rendering: pixelated" draggable="false" width="81px" height="31px" src="https://nozascorner.neocities.org/button.gif"></a></li>
+        <li><a href="https://themaczone.neocities.org/"><img style="image-rendering: pixelated" src="sources/maczone_deux.gif" alt="MACZONE" draggable="false" width="88" height="31"></a></li>
+        <li><a draggable="false" target="blank" href="https://sitcomtheory.org/"><img style="image-rendering: pixelated" draggable="false" src="https://sitcomtheory.neocities.org/BUTTONS/sitcombutton.webp"></a></li>
+        <li><a href="https://donnasaturno.neocities.org"><img src="https://donnasaturno.neocities.org/pictures/button.gif" alt="Gotta go to sleep"></a></li>
+        <li><a href="https://networkneighbourhood.neocities.org"><img src="https://networkneighbourhood.neocities.org/buttons/nntest.gif" style="width:88px; height:31px;"></a></li>
+        <li><a href="https://nozascorner.neocities.org/" target="_blank"><img class="top" style="image-rendering: pixelated" draggable="false" width="88" height="31" src="https://nozascorner.neocities.org/button.gif"></a></li>
       </ul>
     </div>
    </div>
@@ -83,8 +85,9 @@
         <li><a href="aboutme.html">About Me</a></li>
       </ul>
     </div>
-    <div id="github" class="textbox">
-      <iframe src="https://github.com/NoZaMaS" style="justify-content: center;"></iframe>
+    <div id="github" class="textbox" style="text-align:center;">
+      <a href="https://nozascorner.neocities.org/" target="_blank" style="display:block;margin:auto;"><img src="sources/oldsite.png" style="width:480px; height:320px"> </a>
+      <a href="https://nozascorner.neocities.org/">Old site (not maintained anymore</a>
     </div>
     <div id="tetopear" class="textbox">
       <p> <a href="tetopear.html">Teto of Wisdom</a> just dropped! </p>
@@ -100,13 +103,21 @@
   <div class="sidebar">
     <div class="textbox right" style="margin-top: 75%;">
       <p>some cool music while you browse my page!</p>
-      <audio controls autoplay loop>
-        <source src="sources/bgMusic.ogg" type="audio/ogg">
         <source src="sources/bgMusic.mp3" type="audio/mpeg">
-        <p>said cool music</p>
-      </audio> 
+        <p id="Play" onclick="playback();">Play</p> <p onclick="sound.stop();">Pause </p> 
     </div>
   </div>
+
+  <script src="node_modules/howler/dist/howler.js"></script>
+  <script>
+    var state = 0;
+    document.getElementById("Play").addEventListener("click", playback);
+    function playback(){
+      if (!sound.playing()) {
+        sound.play();
+      };
+      }
+  </script>
 
   </body>
 </html>

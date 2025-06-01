@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+  <p>this is a test</p>
+  <script src="node_modules/howler/dist/howler.js"> </script>
+  <script>
+    let sound = new Howl({
+      src: ['sources/bgMusic.mp3'],
+      loop: true,
+      autoplay: true,
+      volume: 0.1,
+    });
+
+    sound.play();
+  </script>
+  </body>
+</html>
