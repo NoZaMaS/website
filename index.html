@@ -12,6 +12,19 @@
       margin: auto;
      }
    </style>
+   <script src="./node_modules/howler/dist/howler.js"></script>
+   <script>
+     const sound = new Howl({
+       src: ['./sources/bgMusic.mp3'],
+       loop: true,
+       volume: 0.1
+     });
+     function playback() {
+       if(!sound.playing()){
+         sound.play()
+       };
+     }
+   </script>  
    <!-- headtitle font -->
    <link rel="stylesheet" href="style.css">
    <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,7 +47,6 @@
 
   <!-- main content -->
   <body>
-   
     <!-- header -->
    <div class="header">
     <div class="headtitle">
@@ -105,16 +117,5 @@
         <p id="Play" onclick="playback();">Play</p> <p onclick="sound.stop();">Pause </p> 
     </div>
   </div>
-
-  <script type="text/javascript" src='./howler.js'></script>
-  <script type="text/javascript" src='./script.js'>
-    document.getElementById("Play").addEventListener("click", playback);
-    function playback(){
-      if (!sound.playing()) {
-        sound.play();
-      };
-      }
-  </script>
-
   </body>
 </html>
